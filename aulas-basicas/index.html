@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Testando react</title>
+
+        <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>   
+    </head>
+
+    <body>
+
+        <!-- React é utilizado para criação de paginas dinamicas -->
+        <div id="app"></div>
+        
+        <script type="text/babel">
+
+            // Usando usestate para atualizar o valor das compras
+
+            
+            // Componente JSX que renderiza a página.
+            function App (){
+                return (
+                    <h1>
+                        Loja do Kauan
+                        <div>
+                            <Comprar /> 
+                        </div>    
+                    </h1>
+                )
+            }
+
+            // Componente comprar
+            function Comprar () {
+                const [count, setCount] = React.useState(0);
+
+                function calcularCompra () {
+                    return setCount(count + 1)
+                }
+
+                /*
+                    A cada clique do botão, a variável count irá
+                    se atualizar, cada vez que um state é atualizado
+                    o react renderiza novamente o componente.
+                */
+
+                return (
+
+                    <div>
+                        <button onClick={calcularCompra}>Comprar</button>
+                        <p>Compras: {count}</p>    
+                        <p>Valor total: {count * 232}</p>    
+                    </div>
+
+                )
+            }
+
+            
+            ReactDOM.render(<App />, document.querySelector('#app'));
+        </script>  
+
+    </body>
+
+
+</html>
