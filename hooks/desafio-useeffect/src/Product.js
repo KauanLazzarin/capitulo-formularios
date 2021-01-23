@@ -1,5 +1,3 @@
-// https://ranekapi.origamid.dev/json/api/produto/notebook
-
 export default function Product ({nome, preco}) {
     return (
         <div>
