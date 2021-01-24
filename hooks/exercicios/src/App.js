@@ -4,6 +4,7 @@ import UseRef from "./UseRef";
 import UseMemo from "./UseMemo";
 import UserContext from './UserContext';
 import UseContext from './UseContext';
+import CustomHooks from "./CustomHooks";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <UseRef />
         <UseMemo />
         <UseContext />
+        <CustomHooks />
 
     </UserContext.Provider >
   );
