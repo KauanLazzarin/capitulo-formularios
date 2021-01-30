@@ -1,4 +1,5 @@
 import Input from "./Input";
+import Select from "./Select";
 import Textarea from "./Textarea";
 
 export default function App() {
@@ -6,6 +7,7 @@ export default function App() {
     <div className="App">
       <Input />
       <Textarea />
+      <Select />
     </div>
   );
 }

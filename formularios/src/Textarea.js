@@ -6,10 +6,7 @@ export default function Textarea () {
     return (
         <div>
             <textarea value={value}  onChange={({target}) => setValue(target.value)}/>
-            
-            {
-                value
-            }
+            <p>{value}</p>
         </div>
     )
 };

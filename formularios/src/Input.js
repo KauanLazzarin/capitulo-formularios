@@ -38,8 +38,8 @@ export default function Input () {
             onChange={handleChange}
             />
 
-            {data.email}
-            {data.name}
+            <p>{data.email}</p>
+            <p>{data.name}</p>
         </form>
     );
 };
