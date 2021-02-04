@@ -1,7 +1,16 @@
 import React from 'react';
 
+function CheckColor (  props  ) {
+    return (
+        <input type="checkbox" value={props.color} onChange={props.handlerFunction}/>
+    );
+};
+
+
 export default function Checkbox (){
     const [cores, setCores] = React.useState([]);
+    const colors = ['azul', 'roxo', 'laranja', 'verde', 'vermelho', 'cinza'];
+
 
     function handleChange ( {target}) {
         if (target.checked) {
@@ -13,15 +22,15 @@ export default function Checkbox (){
 
     return (
         <div>
-            <label>
-                <input type="checkbox" value="azul" checked={cores.includes('azul')} onChange={handleChange}/>
-                Azul.
-            </label>
 
-            <label>
-                <input type="checkbox" value="vermelho" checked={cores.includes('vermelho')} onChange={handleChange}/>
-                Vermelho.
-            </label>
+            {
+                colors.map((color) => {
+                    return <label>
+                        <CheckColor color={color} handlerFunction={handleChange}/>
+                        {color}
+                    </label>
+                })
+            }
 
             {
                 cores.map((cor) => <h2>{cor}</h2>)
