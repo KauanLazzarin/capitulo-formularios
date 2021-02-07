@@ -1,11 +1,13 @@
 import React from 'react';
 import Input from './Input';
+import Radio from './Radio';
 import Select from './Select';
 
 export default function Form () {
     const [nome, setNome] = React.useState(null);
     const [email, setEmail] = React.useState(null);
     const [product, setProduct] = React.useState("");
+    const [color, setColor] = React.useState("");
 
     return (
         <form action="">
@@ -29,6 +31,12 @@ export default function Form () {
                 label="Email" 
                 value={email} 
                 updateFunction={setEmail} 
+            />
+
+            <Radio
+                options={['Vermelho', 'Azul']}
+                value={color}
+                updateFunction={setColor}
             />
         </form>
     )
