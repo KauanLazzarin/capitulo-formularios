@@ -4,6 +4,7 @@ import Input from "./Input";
 import Radio from "./Radio";
 import Select from "./Select";
 import Textarea from "./Textarea";
+import Validacao from "./Validacao";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
       <Radio />
       <Checkbox />
       <Form/>
+      <Validacao />
     </div>
   );
 }
